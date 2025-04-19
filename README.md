@@ -1,66 +1,65 @@
-# 🌈 Sentivibe – AI Sentiment Analyzer
+# 🧠 Text Classification using DistilBERT
 
-**Sentivibe** is a real-time, AI-powered web application that analyzes the **emotional sentiment** of any text input. Whether it’s a review, comment, or personal message — Sentivibe lets you *feel the vibe* of your words using cutting-edge NLP models.
-
----
-
-## 🔍 Table of Contents
-
-- [📌 Overview](#-overview)
-- [🎯 Objective](#-objective)
-- [🧠 How It Works](#-how-it-works)
-- [🚀 Setup Instructions](#-setup-instructions)
-- [📁 Project Structure](#-project-structure)
-- [🛠️ Technologies Used](#️-technologies-used)
-- [💡 Future Improvements](#-future-improvements)
-- [🙌 Acknowledgements](#-acknowledgements)
-- [📬 Contact](#-contact)
+## 📌 Overview  
+This project focuses on **text classification** using the **DistilBERT** model, a lightweight and efficient version of BERT developed by Hugging Face. The notebook walks through the entire pipeline of natural language processing — from loading and preprocessing a text dataset to fine-tuning the transformer model and evaluating its performance. The aim is to build a robust, high-performing classifier that can generalize well to unseen text data using minimal resources and training time.
 
 ---
 
-## 📌 Overview
-
-Sentivibe is an interactive web app built using **Streamlit** and a fine-tuned **DistilBERT** model from Hugging Face. It provides real-time sentiment analysis of text, classifying it as **positive** or **negative** with helpful visual feedback.
-
----
-
-## 🎯 Objective
-
-The goal of this project is to:
-- Enable easy and intuitive sentiment analysis using machine learning.
-- Help users understand the emotional tone of their words.
-- Explore the power of transformers for real-world NLP tasks.
+## 🎯 Objectives  
+- Load and prepare text data for classification tasks  
+- Tokenize and encode text using **DistilBERT tokenizer**  
+- Fine-tune the **`distilbert-base-uncased`** model on the dataset  
+- Evaluate model performance using key NLP metrics  
+- Predict outcomes on new, custom text samples  
 
 ---
 
-## 🧠 How It Works
+## 🔄 Project Workflow  
 
-### 1. **Model Training**
-- Trained a binary classifier using **DistilBERT** on labeled sentiment data (positive & negative).
-- The model is fine-tuned using Hugging Face's `transformers` and PyTorch libraries in the `train.ipynb` notebook.
+### 1. 📂 Data Preparation  
+- Load a labeled text dataset (e.g., binary/multiclass)  
+- Encode categorical labels into numerical format  
+- Split dataset into **training** and **testing** sets  
 
-### 2. **Model Export**
-- The trained model and tokenizer are saved in the `saved_model/` directory for use in the app.
+### 2. 🔠 Tokenization  
+- Use Hugging Face's **DistilBERT tokenizer**  
+- Convert text into token IDs and attention masks  
+- Ensure proper padding and truncation  
 
-### 3. **Web Application (Streamlit)**
-- Built with Streamlit for a fast, interactive UI.
-- Loads the model, takes user input, and predicts the sentiment.
+### 3. 🧠 Model Implementation - DistilBERT  
+- Use `transformers` library to load **`distilbert-base-uncased`**  
+- Add a classification head on top (e.g., linear layer)  
+- Fine-tune the model using **PyTorch** or **Trainer API**  
 
-### 4. **Prediction Logic**
-- Tokenizes the input using the saved tokenizer.
-- Runs inference on the DistilBERT model.
-- Classifies sentiment as:
-  - **1 → Positive 😊**
-  - **0 → Negative 😞**
-- Displays feedback with emojis, colors, and animations.
+### 4. 📊 Evaluation  
+- Compute metrics including:  
+  - ✅ **Accuracy**  
+  - ✅ **Precision & Recall**  
+  - ✅ **F1-Score**  
+  - ✅ **Confusion Matrix**  
+- Visualize results for deeper insights  
+
+### 5. 🔮 Inference  
+- Pass custom text inputs to the trained model  
+- Return predicted labels with confidence scores  
 
 ---
 
-## 🚀 Setup Instructions
+## 🧪 Libraries & Tools  
+- 🤗 `transformers` – Hugging Face model & tokenizer  
+- 📊 `sklearn` – Evaluation metrics  
+- 🧮 `pandas`, `numpy` – Data handling  
+- 🔥 `torch` – Model training (or optionally, TensorFlow)
 
-Follow these steps to run Sentivibe locally:
+---
 
-### 1. **Clone the Repository**
-```bash
-git clone https://github.com/your-username/sentivibe.git
-cd sentivibe
+## 🧰 Sample Code Snippet
+
+```python
+from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
+
+tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
+model = DistilBertForSequenceClassification.from_pretrained("distilbert-base-uncased")
+
+inputs = tokenizer("This movie was fantastic!", return_tensors="pt", truncation=True, padding=True)
+outputs = model(**inputs)
