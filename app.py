@@ -4,7 +4,7 @@ import torch
 
 
 # Load model and tokenizer
-model_path = "saved_model"
+model_path = "distilbert-base-uncased"
 tokenizer = DistilBertTokenizerFast.from_pretrained(model_path)
 model = DistilBertForSequenceClassification.from_pretrained(model_path)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
