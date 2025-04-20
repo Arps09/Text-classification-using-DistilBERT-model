@@ -5,6 +5,17 @@ This project focuses on **text classification** using the **DistilBERT** model, 
 
 ---
 
+🚀 Live Demo
+Experience the power of DistilBERT live! Click the link below to test the sentiment analysis tool in real-time using Streamlit:
+
+🔗 [Try Sentivibe 💬](https://sentivibe.streamlit.app/)
+
+---
+🎥 Project Walkthrough
+Check out the full explanation and walkthrough of the app, including development and usage:
+
+▶️ [Watch on YouTube](https://youtu.be/DlBC7CpucT8?si=FX40yK66UWbcFZme)
+
 ## 🎯 Objectives  
 - Load and prepare text data for classification tasks  
 - Tokenize and encode text using **DistilBERT tokenizer**  
