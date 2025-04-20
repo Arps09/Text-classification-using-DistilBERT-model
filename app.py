@@ -65,7 +65,7 @@ st.markdown("""
 
 # Title and description
 st.markdown('<div class="title">Sentivibe 🌈</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">Feel the vibe of your words – powered by AI & Emotion 🎭</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">Decode the mood behind your message with the magic of AI & emotional intelligence 🧠🎭</div>', unsafe_allow_html=True)
 
 # Prediction function
 def predict(text):
