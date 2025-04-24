@@ -68,13 +68,10 @@ Check out the full explanation and walkthrough of the app, including development
 
 ---
 
-## 🧰 Sample Code Snippet
+## ✍️ Author
 
-```python
-from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
+**Arpita Mishra**  
+B.Tech CSE, [C.V Raman Global University]  
+*Passionate about NLP, AI, and deep learning.*
 
-tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
-model = DistilBertForSequenceClassification.from_pretrained("distilbert-base-uncased")
 
-inputs = tokenizer("This movie was fantastic!", return_tensors="pt", truncation=True, padding=True)
-outputs = model(**inputs)
