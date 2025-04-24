@@ -1,3 +1,10 @@
+## *Project Name- Text Classification Using DistilBERT model*
+## *Name- Arpita Mishra*
+## *Reg no- 2201020383*
+## *Cranes Reg no- CL2025010601924576*
+
+---
+
 # 🧠 Text Classification using DistilBERT
 
 ## 📌 Overview  
