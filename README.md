@@ -1,3 +1,8 @@
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Project Status](https://img.shields.io/badge/Project%20Status-Completed-success)
+![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen)
+
+
 ## *Project Name- Text Classification Using DistilBERT model*
 ## *Name- Arpita Mishra*
 ## *Reg no- 2201020383*
