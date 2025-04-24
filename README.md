@@ -52,11 +52,23 @@ Check out the full explanation and walkthrough of the app, including development
   - ✅ **Precision & Recall**  
   - ✅ **F1-Score**  
   - ✅ **Confusion Matrix**  
-- Visualize results for deeper insights  
+- Visualize results for deeper insights
 
 ### 5. 🔮 Inference  
 - Pass custom text inputs to the trained model  
 - Return predicted labels with confidence scores  
+
+---
+
+## 📈 Model Performance
+
+| Metric        | Class 0 | Class 1 | Macro Avg | Weighted Avg |
+|---------------|---------|---------|-----------|--------------|
+| **Precision** | 0.87    | 0.92    | 0.89      | 0.90         |
+| **Recall**    | 0.91    | 0.88    | 0.90      | 0.90         |
+| **F1-Score**  | 0.89    | 0.90    | 0.90      | 0.90         |
+| **Support**   | 653     | 731     | 1384      | 1384         |
+| **Accuracy**  |         |         |           | **0.90**     |
 
 ---
 
@@ -68,6 +80,30 @@ Check out the full explanation and walkthrough of the app, including development
 
 ---
 
+## 🧠 Key Learnings
+
+Throughout this project, I gained valuable insights and hands-on experience in:
+
+- 🔍 **Understanding Transformers**: Learned how the DistilBERT model works under the hood and why it’s an efficient alternative to BERT for text classification tasks.
+
+- 🧼 **Text Preprocessing**: Explored essential preprocessing steps such as tokenization, padding, truncation, and converting labels into numerical format using Hugging Face's tokenizer.
+
+- 🧠 **Model Fine-Tuning**: Successfully fine-tuned `distilbert-base-uncased` on a custom dataset for binary classification using PyTorch and Hugging Face's `Trainer` API.
+
+- 📊 **Evaluation Metrics**: Deepened my understanding of NLP performance metrics like Precision, Recall, F1-Score, and how they help measure the quality of predictions.
+
+- 🚀 **Streamlit Deployment**: Deployed a real-time sentiment analysis tool using Streamlit, allowing users to interact with the model via a web interface.
+
+- 🧪 **End-to-End NLP Pipeline**: Built a complete machine learning pipeline — from loading data to model training, evaluation, and inference — using modern libraries like `transformers`, `sklearn`, and `torch`.
+
+This project helped strengthen my foundation in NLP and gave me practical skills in building and deploying transformer-based models.
+
+---
+
+## 📃License
+This project is for educational and research purposes only.
+
+---
 ## ✍️ Author
 
 **Arpita Mishra**  
